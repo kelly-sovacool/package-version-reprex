@@ -1,8 +1,8 @@
 Package: pakreprex
-Title: What the Package Does (One Line, Title Case)
+Title: Reproducible example of package dependency version handling
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
+    person("Kelly", "Sovacool", , "kelly@sovacool.dev", role = c("aut", "cre"))
 Description: What the package does (one paragraph).
 License: MIT + file LICENSE
 Encoding: UTF-8
@@ -11,3 +11,5 @@ RoxygenNote: 7.3.3
 Imports: 
     dplyr,
     ggplot2 (< 4.0.0)
+Config/Needs/check:
+    remotes
