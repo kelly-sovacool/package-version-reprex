@@ -26,6 +26,8 @@ jobs:
       R_KEEP_PKG_SOURCE: yes
 
     steps:
+      - uses: actions/checkout@v4
+
       - uses: ./.github/actions/install-r
         with:
           r-version: ${{ matrix.config.r }}
