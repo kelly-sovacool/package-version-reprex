@@ -1,6 +1,6 @@
-name: Install R
+name: Install R + renv
 description: |
-  Install R and dependencies
+  Install R and dependencies with renv
 inputs:
   r-version:
     description: "The version of R to install"
