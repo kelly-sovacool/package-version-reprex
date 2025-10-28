@@ -30,7 +30,7 @@ runs:
         use-public-rspm: ${{ inputs.use-public-rspm }}
 
     - name: initialize renv
-      shell: Rscript
+      shell: Rscript {0}
       run: |
         if (!requireNamespace("renv", quietly = TRUE)) {
           install.packages("renv")
