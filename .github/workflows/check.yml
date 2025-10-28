@@ -87,9 +87,15 @@ jobs:
           http-user-agent: ${{ matrix.config.http-user-agent }}
           use-public-rspm: true
 
+      - name: read pkg versions
+        shell: bash
+        run: |
+          PKG_VERSIONS=$(cat .github/package-versions.txt)
+          echo $PKG_VERSIONS="${PKG_VERSIONS}" >> $GITHUB_ENV
+
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          extra-packages: any::rcmdcheck, any::ggplot2@3.5.2, local::.
+          extra-packages: local::., ${{ env.PKG_VERSIONS }}
 
       - uses: r-lib/actions/check-r-package@v2
         with:

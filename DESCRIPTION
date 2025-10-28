@@ -12,6 +12,8 @@ Imports:
     dplyr,
     ggplot2 (< 4.0.0),
     DESeq2
+Suggests:
+    rcmdcheck
 Config/renv/profiles/dev/dependencies:
     rcmdcheck
 biocViews:
