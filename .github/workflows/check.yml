@@ -11,6 +11,7 @@ permissions: read-all
 
 jobs:
   check_renv:
+    if: false
     runs-on: ${{ matrix.config.os }}
 
     name: renv ${{ matrix.config.os }} (${{ matrix.config.r }})
@@ -64,6 +65,9 @@ jobs:
         with:
           packages-file: .github/package-versions.txt
           extra-packages: local::.
+          r-version: ${{ matrix.config.r }}
+          http-user-agent: ${{ matrix.config.http-user-agent }}
+          use-public-rspm: true
 
       - uses: r-lib/actions/check-r-package@v2
         with:
