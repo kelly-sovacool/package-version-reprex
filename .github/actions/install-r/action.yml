@@ -4,7 +4,7 @@ description: |
 inputs:
   r-version:
     description: "The version of R to install"
-    default: "4.5.1"
+    default: "release"
   renv-profile:
     default: '"dev"'
   http-user-agent:
@@ -19,7 +19,7 @@ runs:
       shell: bash
       run: |
         sudo apt-get update
-        sudo apt-get install -y libcurl4-openssl-dev libssl-dev libxml2-dev pandoc
+        sudo apt-get install -y libcurl4-openssl-dev pandoc
 
     - uses: r-lib/actions/setup-pandoc@v2
 

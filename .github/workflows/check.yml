@@ -5,7 +5,7 @@ on:
     branches: [main, master]
   pull_request:
 
-name: R-CMD-check.yaml
+name: R-CMD-check
 
 permissions: read-all
 
@@ -13,7 +13,7 @@ jobs:
   check_renv:
     runs-on: ${{ matrix.config.os }}
 
-    name: ${{ matrix.config.os }} (${{ matrix.config.r }})
+    name: renv ${{ matrix.config.os }} (${{ matrix.config.r }})
 
     strategy:
       fail-fast: false
@@ -63,7 +63,7 @@ jobs:
   check_pak:
     runs-on: ${{ matrix.config.os }}
 
-    name: ${{ matrix.config.os }} (${{ matrix.config.r }})
+    name: pak ${{ matrix.config.os }} (${{ matrix.config.r }})
 
     strategy:
       fail-fast: false
