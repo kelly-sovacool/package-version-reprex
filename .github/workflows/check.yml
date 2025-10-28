@@ -11,7 +11,6 @@ permissions: read-all
 
 jobs:
   check_renv:
-    if: false
     runs-on: ${{ matrix.config.os }}
 
     name: renv ${{ matrix.config.os }} (${{ matrix.config.r }})
